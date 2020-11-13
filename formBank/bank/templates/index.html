@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BankForm</title>
+</head>
+<body>
+    <form method="POST" action="send_renta">
+        {% csrf_token %}
+        <h3>Оплата за оренду квартиры</h3>
+        <table>{{send_renta}}</table>
+        <input type="submit" value="Отправить">
+    </form>
+    <form METHOD="POST" action="send_money">
+        {% csrf_token %}
+        <h3>Перечисление денег</h3>
+        <table>{{send_money}}</table>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
